@@ -1,0 +1,97 @@
+Microsoft Windows [Version 10.0.22631.4037]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\01>npm init
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help init` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg>` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (01) C
+Sorry, name can no longer contain capital letters.
+package name: (01)
+version: (1.0.0)
+description:
+entry point: (index.js)
+test command:
+git repository:
+keywords:
+author:
+license: (ISC)
+About to write to C:\Users\01\package.json:
+
+{
+  "name": "01",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
+
+
+Is this OK? (yes) yes
+
+
+C:\Users\01>npm install
+
+up to date, audited 1 package in 481ms
+
+found 0 vulnerabilities
+
+C:\Users\01>d:
+
+D:\>cd react
+
+D:\React>npm create vite
+Need to install the following packages:
+create-vite@5.5.2
+Ok to proceed? (y) y
+
+
+> npx
+> create-vite
+
+√ Project name: ... firstreactapp
+√ Select a framework: » React
+√ Select a variant: » JavaScript
+
+Scaffolding project in D:\React\firstreactapp...
+
+Done. Now run:
+
+  cd firstreactapp
+  npm install
+  npm run dev
+
+
+D:\React>cd firstreactapp
+
+D:\React\firstreactapp>npm install
+
+added 263 packages, and audited 264 packages in 1m
+
+102 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+D:\React\firstreactapp>npm run dev
+
+> firstreactapp@0.0.0 dev
+> vite
+
+
+  VITE v5.4.2  ready in 271 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+8:55:24 pm [vite] hmr update /src/App.jsx
