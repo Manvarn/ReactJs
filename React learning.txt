@@ -1,0 +1,489 @@
+242,348
+
+-> React is a JavaScript library for building user interfaces.
+-> React is used to build single-page applications.
+-> React allows us to create reusable UI components.
+
+-> React data flow from Top to Bottom (from parent to child)
+
+
+-------------------- x -------------------- x -------------------- x --------------------
+1. React Basics:
+    -> JSX (JavaScript XML): Syntax extension that allows HTML-like code within JavaScript.
+    -> Components: Building blocks of React applications (functional vs. class components).
+    -> Props: Passing data from parent to child components.
+    -> State: Managing local component data.
+    -> Event Handling: Handling events (e.g., clicks, form submissions) in React.
+    -> Conditional Rendering: Rendering elements based on certain conditions.
+    -> Lists and Keys: Rendering lists of elements and using keys for efficient updates.
+    -> Forms in React: Managing forms and form data (controlled vs. uncontrolled components).
+    -> React Router: Handling navigation and routing between different views or pages.
+
+2. Intermediate React Concepts:
+=> Hooks:
+    -> useState: Managing state in functional components.
+    -> useEffect: Performing side effects in functional components.
+    -> useContext: Sharing state between components without prop drilling.
+    -> useReducer: Alternative to useState for complex state logic.
+    -> useMemo and useCallback: Optimizing performance by memoizing values and functions.
+    -> Component Lifecycle: Lifecycle methods in class components (componentDidMount, componentDidUpdate, etc.) and their equivalents in functional components with hooks.
+    -> Context API: Sharing global state across components without props.
+    -> Prop Drilling: Passing data through many levels of components, and how to avoid it.
+    -> React Fragments: Grouping multiple elements without adding extra nodes to the DOM.
+
+3. State Management:
+    -> Component State: Understanding local component state.
+    -> Global State Management:
+    -> Context API: For managing global state.
+    -> Redux: A state management library for larger apps (actions, reducers, store).
+    -> MobX: An alternative to Redux, focusing on observables.
+    -> Recoil: A state management library built specifically for React.
+
+4. React Performance Optimization:
+    -> Code Splitting: Lazy loading parts of the application to improve initial load time.
+    -> React.memo: Memoizing components to prevent unnecessary re-renders.
+    -> React.PureComponent: A class-based component that only re-renders when props or state change.
+    -> Virtual DOM: Understanding how React efficiently updates the UI.
+    -> Suspense and Lazy Loading: Code splitting with React Suspense and React.lazy for dynamically importing components.
+
+5. Routing in React:
+   -> React Router: Managing navigation between different pages/views in a React app.
+   -> Dynamic Routing: Handling dynamic routes and parameters.
+   -> Nested Routes: Setting up nested routes and views.
+   -> Redirects and Navigation: Programmatically navigating and handling redirects.
+
+6. Testing in React:
+    -> Jest: Testing framework commonly used with React.
+    -> React Testing Library: A testing utility that focuses on testing components as the user would interact with them.
+    -> Enzyme: Another testing utility (though React Testing Library is more popular now).
+    -> Mocking: Mocking API calls and functions in tests.
+
+7. React Developer Tools:
+ -> React Developer Tools: Browser extension for inspecting and debugging React applications.
+ -> Profiler: Profiling performance in React apps using the React DevTools.
+ -> Error Boundaries: Catching and handling JavaScript errors in React components.
+
+8. Styling in React:
+    -> Inline Styles: Styling components directly in the JavaScript code.
+    -> CSS Modules: Scoping CSS to individual components.
+    -> Styled-components: Writing CSS in JavaScript using tagged template literals.
+    -> Sass: Using Sass (SCSS) for styling React components.
+    -> Tailwind CSS: Utility-first CSS framework, often used with React.
+
+9. Advanced Topics:
+    -> Server-Side Rendering (SSR): Rendering React apps on the server to improve SEO and load time (e.g., Next.js).
+    -> Static Site Generation (SSG): Pre-generating static HTML pages from React components (e.g., Gatsby).
+    -> Progressive Web Apps (PWA): Building offline-capable apps with React.
+    -> React Native: Building mobile applications using React.
+    -> TypeScript with React: Using TypeScript to add static typing to React applications.
+    -> GraphQL and Apollo Client: Querying data with GraphQL instead of REST APIs.
+    -> WebSockets: Real-time data and messaging using WebSockets.
+
+10. Building and Deploying React Apps:
+    -> Build Process: Using Webpack, Babel, and other tools to bundle React applications.
+    -> Deployment: Deploying React apps to platforms like Netlify, Vercel, Heroku, AWS, or Firebase.
+    -> Continuous Integration/Continuous Deployment (CI/CD): Automating the build and deployment processes.
+
+11. Modern React Practices:
+    -> Atomic Design: Breaking down components into reusable, smaller pieces.
+    -> Functional Programming: Leveraging functional programming concepts like immutability, higher-order functions, and pure functions in React.
+    -> Design Patterns: Common design patterns in React, like container/presentational components and higher-order components (HOCs).
+
+12. React Ecosystem:
+    -> React Query: A library for fetching, caching, and syncing data in React applications.
+    -> React Hook Form: A library for managing forms in React efficiently.
+    -> Formik: A popular form library for React.
+    -> Framer Motion: Animation library for React that allows easy creation of complex animations.
+    -> React DnD: A library for building drag-and-drop interfaces.
+-------------------- x -------------------- x -------------------- x --------------------
+
+react learning series :- https://github.com/hiteshchoudhary/chai-aur-react/tree/main/02counter
+react fiber :- https://github.com/acdlite/react-fiber-architecture
+
+-> elsint type script ni error check kare.
+
+-> hooks use in function components and top level ma j call thay.
+
+
+
+-------- Event Handling ----------
+
+-> Remember how we haven't called this function , if you call this function here then it will run without even clicking. You just need to pass reference and not call here.
+
+-> In React , event handlers receive the event object as an argument by default. However , when you use arrow function directly in the onClick attribute without passing the event explicitly , React doesn't pass the event object to your handler function. This is because the arrow function creates a new function and call your handler without passing any arguments.
+
+-> Function call karti samay ae apde je bhi pass kariye ae as a argument. and function define ka declare kariye to ae parameter.
+
+-> Event Propagation refers to the process of how events propagate or travel through the Dom(Document Object Model) hierarchy.
+
+-> In JavaScript , there are two phases of event propagation capturing phase and bubbling phase.
+
+-> State refers to an object that holds data or information about the components , State dynamic bhi hai aur mutable bhi hai
+
+-> useState is a React hook that allows you to create and manage state in a functional component.(useState ma jyre state update thay atle ae re-render thay jay)
+
+-> Before useState, only class components could manage state. But now, with hooks, functional components can also have state.
+
+-> The virtual DOM(VDOM) is a programming concept where an ideal , or "virtual" , representation of a UI is kept in memory and synced with the "real" DOM by  a library such as ReactDOM. This process is called Reconciliation.
+
+-> State is a way to store and manage data that can change over the lifetime of a component.
+
+-> When state changes , React re-renders the component to reflect the new state. This ensures that the user interface stays in sync with the underlying data.
+
+-> When React is creates a new tree , it eill re-run or re-render the affected component and all its children.
+
+-> Derived state is any state than can be computed based on other state or props. It is not stored directly in the component's state but is calculated when needed. This aproach helps avoid duplication and keeps the state simpler and more manageable.
+
+-> Lifting State UP is a pattern in React where you move the state from child components to a common parent component so that multiple child components can share and synchronize this state.
+
+-> stIsOn(!isON) means value true hoy to false thay jay and false hoy to true.
+
+-> nullish operator means if value 1 is null or undefined  , result will be value 2 . 
+Otherwise, result will be value1.
+
+-> preventdefault ee ek method che je by default event provide kare jenathi form nu je default che aene apde create kari sakiye.(Prevent page refresh on form submit)
+
+-> mujhe ke variable chahiye jimse mujhe data ko store karna ha , ek variable jiski value constantly change hota rahega jab jab user kuch bhi type kar ne vala he hamari input value me.
+
+-> filter method - creates a new array with all elements that pass a specific test implemented by a provided callback function.
+
+-> The map() method loops through the array numbers and calls the callback function on each element.
+
+-> The map method creates a new array by applying a provided function to each element of the original array . It transforms each element and returns a new array with the transformed values.
+
+-> The filter() method is used to select specific elements from an array based on a condition and returns a new array containing only the elements that meet the condition. Like map(), it doesn't modify the original array. callback ma (element , index)
+
+-> map and filter function ni under callback function apvo j pade , aema parameter pass karavu j pade.
+
+-> It is typically used in conditional rendering or to initialize state or props when no data is available yet.
+
+-> ? - allows you to concisely evaluate a condition and return one value if the condition is true, and another value if it's false
+
+-> target: The target property of the event object refers to the specific DOM element that triggered the event. For example, if a user types something in a text input field, event.target would be that input field.
+
+-> useEffect ne state management thi kai leva deva nathi , state management ke liye we have useState , useReducer , useContext APi.
+------ [useEffect returns undefined.] ------
+
+-> The useEffect hook in React is used for handling side effects in functional components.
+useEffect is a React Hook that lets you synchronize a component with an external system. 	
+
+->syntax :- useEffect(()=>{
+		//your side effect code here
+
+   	    return () => {
+		//Cleanup code here(optional)
+            };
+           },[dependencies]);
+- function and dependencies
+
+-> callback function puro thay ne ,(comma) api ne je apde pass kariye ae array dependecnies hota hai.
+
+-> Initial Render:- When the component mounts useEffect can run its effect function to perform operation like data fetching.(first time component render called mount.)
+
+-> Depencdencies: The second argument , an array of dependencies , which determines when the effect should re-run. It any value in this array changes , the effect will re-run.(koi bhi value muki didhi ka to state variable rakhi diya aur uski value change ho gayi to full component to run thase j but sathe sathe useEffect hook bhi chalega) , apde useEffect hook ne kyre chalavo kyre re-run karvu ae dependencies thi thay.
+
+-> Cleanup:- useEffect can return a cleanup function to clean up after the effect , such as unsubscribing from an event or clearing a timer.
+
+->  let count = 0;
+    function increment(){
+       count +=1;  //Modifies an external variable
+    } bol h
+    increment();
+    console.log(count);
+//aa che side effect
+
+->  useEffect aese side effect vale operation he use perform karta hai isliye useEffect use hota hai.
+
+-> react ma badha function pure function hote hai , jab bhi aap same input doge wo apko same output dega.(-The useEffect hook in React is used to perform side effects in function components, such as data fetching, subscriptions, or manual DOM manipulations, after the component renders.)
+
+-> [-A side effect is any operation that affects something outside the scope of a function (Pure Function)]. In React , side effects are managed using hooks like useEffcect to ensure they are handled in a controlles and predictable manner.
+
+-> Fetching Data as a Side Effect :
+- When you fetch data in a React component , you're performing a side effect because:
+	-External Interaction: You're interacting with an external data source, such as an API or a server.
+	-State Interaction: The fetched data will usually update the component's state,causing a re-render.
+
+- aese external data jiske sath apko deal karna ho , to wap per apja useeffect use hota hai.
+
+-> useEffect hook apka sirf first time jab component mount hota hai ya render hota hai tab chalta hai.(first time component render called mount.)
+- useEffect is used to perform side effects (like fetching data) in functional components. It runs after the component renders.
+
+-> When you wrap your app or a part of your app with <React.StrictMode>, React will check for:
+
+-Deprecated lifecycle methods.
+-Unsafe side effects in certain lifecycle methods.
+-Potential problems with the usage of hooks.
+-Problems related to accidental mutations.
+
+-> [count,setCount] - This line initializes a state variable called count and a function to update it called setCount.
+
+https://github.com/thapatechnical/pokemon_thapa_react/blob/master/src/Pokemon.jsx
+
+-> use State , useEffect , useRef , useCallback , useMemo , useContext API , useReducer 
+
+-> Synchronous: Each API call waits for the previous one to complete before executing the next.
+
+-> Asynchronous: API calls run in parallel, improving efficiency when multiple requests are needed.
+
+-> Callback: One API call triggers the next when its data is ready.
+
+-> useRef()
+    - useRef is a React Hook that lets you reference a value that'sakiye not needed for rendering.(re-render kyrey na thay , )
+
+    - Unlike states , it's directly mutable.
+
+    - You can access value of its using yourRef.current;
+
+-> Uncontrolled Components:
+    - Uncontrolled components manage their own state internally and are typically refs.
+
+-> - GET: Retrieves data (to-do list) from the API.
+   - POST: Sends new to-do data to the API to add a new task.
+   - PUT (UPDATE): Updates an existing to-do by sending modified data to the API.
+   - DELETE: Removes a to-do from the list by sending a DELETE request to the API.
+
+-> useMemo - useMemo hoo hota he wo hamari application ki performance ko (increase) acha karne ki liye , uski performance ko inhence karne ki liye use hota hai. (useMemo returns memoized value.)
+
+-> memoization no use application ni performance increase karva mate.
+	- ek function two parameter le and function call thay parameter pass thay two value sum kare che and result return kare value , apde pachu ae same function call kariye to fisrt time aene calculate kari lidhi value and cache / memory ma save karine muki didhu  , apde second time function call karavsu same parameter and value return kari dese pachi recalculate nay kare concept memoization.
+
+-> useMemo -  It is used to memoize the result of a computation or an expensive calculation. (return memoized value)
+   syntax - const expensiveValue = useMemo(() => {
+  	    return expensiveComputation(a, b);
+            }, [a, b]);
+
+-> useCallback - It is used to memoize a function itself, preventing unnecessary re-creation of the function on each render. (return memoized function)
+   syntax :- const handleClick = useCallback(() => {
+  	     console.log("Button clicked");
+             }, []);
+  	
+-> useCallback syntax - const cachedFn = useCallback(fn, dependencies)
+
+-> useCallback hook - ghana badha function hoy ne apde koi ek function j render karavu ho aena mate useCallback hook use thay che .
+
+-> Refrential Equality - react ke under ek term hota ha "Referential equality" jab bhi hamara page re-render hota he to jo function hote he wo re-create hote he to usko rokne ke liye ham usecallback hook ka use karte he
+
+-> export default memo(ChildA) - wrap kari de jyre jyre parent component run thase ne tyre child component render nay thay , but jo agar parent component ma props change thaya to render thase. But apde jyre props pass karaviye parent component and child component ma  to bane component render thase.
+
+-> useReducer :- It is a react hook used for state management.
+	- useRducer hook che je state manage karta he.
+	- const [state,dispatch] = useReducer(reducer,initialstate)
+					reducer(currentState , action)
+	- action dispatch function se ata he
+
+-> A reducer is a function that decides how the state should change based on the action. The reducer takes the current state and an action, and returns a new state.
+	A key thing to remember -> 1. Reducers must always return a new state.
+				   2. They should never modify the old state directly.	
+
+
+-> useState and useReducer bane nu kam state ne manage kare , but simple state management karvu hoy ne tyre useState use thay che , jyre apde complex state management ka to logic lakhvanu hoy tyre useReducer use thay.
+
+-> Reducer is a function accepts two parameter :- 
+	- newState = reducer (currentState , action)
+
+-> // const [count, setCount] = useReducer(reducer, initialState);
+// count - The current state value. (State Variable)
+// dispatch - TO send actions to the reducer function. (Action Variable)
+// Reducer - A function that takes the current state and an action as arguments, and returns a new state result. (Reducer Function)
+// initialState - The initial state value. (Initial State)
+
+-> React Router is a popular JavaScript framework use for handling routing in React applications.
+
+-> Formik and Yup offer an easy , understandable and extensible solution to handling & validating forms in React and React Native.
+
+-> Formik use thay form ne handle karva mate, form na data get karva mate and Yup form nu validation mate use thay che.
+
+-> ----- Context API -----
+-> A way to pass data through the component tree without having to pass props down manually at every level.
+	- createContext - Creates a Context object.
+	- Provider - A component that provides the context value to its children.
+	- useContext (Consumer) - A hook that allows you to consume a context.
+
+-> ----- Axios -----
+-> Axios is a promise-based HTTP library that helps you easily communicate with server or APIs over the internet.(Axios che ae promises no use kare and http request and response ne handle kare) . It allows your website or app to send and receive data from a server like fetching,submitting,forms, or updating content without reloading the entire page.
+
+-> ----- Redux -----
+-> Redux is a tool that helps manage data (also known as "state") in the large React apps.
+
+-> It allows us to all our app's data in a single place , known as the Redux Store. making it easy to share and update data across different parts of the app.
+
+-> Redux Works :- 
+	- Store - This is where Redux keeps all your data.
+	- Action - This is an object, which tell the redux what to do (like adding a task).
+	- Reducers - How to do. It actually change the data in the store based on the action.
+
+-> Redux Advatages :-
+	- Centralized State Management - Redux stores your app's state in one place , making it easier to manage and access data across components.
+	- Global Access - Any component can access and update the state without passing props down.
+	- Predictable Updates - State changes are controlled and predictable using reducers.
+	- DevTools - Powerful tools for debugging , inspecting state , and replaying actions.
+	- Async Support - Middleware like Thunk or Saga handles async tasks , keeping the code clean.
+
+-> syntax :- function rducer(state = initialState , action) {}
+
+-> Redux Store - syntax
+	import {createStore} from "redux";
+	const store = createStore(reducer);
+- The createStore method creates the Redux store using a reducer function that handles how the state changes in response to actions.
+
+-> dispatch() is used to send the actions to the Redux store.
+	store.dispatch({type: "ACTION_TYPE" , payload: data})
+
+-> getState() retrieves the current state of the Redux store. This is useful for accessing the state after it has been updated or to monitor changes.
+
+
+
+ 
+----------------x---------------
+----- task for interview ----- 
+add to cart
+crud 
+infinite scroll
+redux
+-----------------x---------------
+
+
+https://react.dev/learn/escape-hatches
+
+
+-> Axios , Axios intersepter , body , header , api call  , kevi rite pass thay
+
+
+------x------x------x------ 
+
+
+
+
+
+
+
+
+
+=========================================Redux ================================================
+
+==->Simple Analogy:
+Think of Redux like a restaurant: 🍽️
+1️⃣ Action = Order Placed 📝 (You tell the waiter you want a pizza 🍕)
+2️⃣ Reducer = Chef 👨‍🍳 (The chef checks the order and prepares the pizza)
+3️⃣ Store = Kitchen 🔥 (Where all the food is prepared)
+4️⃣ State = Your Pizza 🍕 (After the chef updates it, you get the pizza!)
+
+This is how Redux manages and updates state in an organized way! 🚀
+
+==-> IN SIMPLE LANGUAGE REDUX --- Think of Redux like a storage room 📦 in a house 🏠 where everything is kept in one place, and you need a proper process (actions & reducers) to take something out or put something in. 🚀
+
+-action - Actions are simple messages that tell Redux what needs to change in the state.
+-reducers - A reducer is a function that listens to actions and updates the state accordingly.
+
+
+
+Redux  is library for javascript application , full javascript ma bhi use kari sakay che not only in react , koi bhi library ma use kari sakiye vue, angular etc 
+
+redux ne predictible state container kevay che karan ke apde bhadha state redux ma store kariye and directly koi bhi jagaye ee apde use kari sakiye globally availble thai jay che state.
+
+                       THREE TERMS  IN REDUX 
+        1.Store- hold state
+        2.Reducer - Actually carries the state transtion depending on action
+        3.Action - describe the change in state of application  basically we define action in dispatch 
+                                - Action  Creator is a function which make dispatch used simontensioly
+
+                      Syntax  = 
+                    function  reducer (state = intial-state,action){     
+                                                                  }
+
+            Example = 
+                            ////    Make Reducer Function
+
+
+                Step 1 =    export const taskReducer = (state = initialstate,action) =>{    
+                                         switch (action.type) {
+                                             case ADD_TASK:
+                                              return {
+                                              ...state,
+                                      task : [...state.task,action.payload]
+
+                                                  }
+
+                Step 2 = import { createStore } from 'redux'             // for making store we have to import from redux
+                Step 3 = const store = createStore(taskReducer)   // Now make STore 
+                Step 4 = store.dispatch({type : ADD_TASK , payload :"dhairya" })    /// dispatch object or function can give                                               action to perform and that action is perfomed by reducer
+                        NOTE: you can also use dispatch in child components 
+                 Step 5 = import {Provider} from "react-redux"     // import provider where you want to wrap all the components                                           <Provider store = {store}>
+                        between                      <App />          like this 
+                                    </Provider>
+
+                Step 6 = import { useSelector } from 'react-redux' // import useSelector where you want to use all the state                             variable inside components. 
+                
+
+
+
+
+
+
+=====================================REDUX - THUNK===========================================
+
+
+1 . Why we Need Redux thunk ?
+  ans- Because if you want to get data from api but , dispatch action only takes static objects and soo if api contains any data then we didnt have any way to get apis data , Redux is only supporting Syncronous Operation and api is a asyncronous calls.
+
+ so we have to use thunk which return async function so that without breaking rules you can use api data.
+ 
+thunk is called middleware , redux thunk provides the dispatch function as an argument
+
+====================================REDUX TOOLKIT ==========================================
+
+- > Redux Toolkt globally state management kare
+
+-> Redux Toolkit Redux ka helper function hain , ek extra tool provide kiya ja raha he.
+
+-> Redux Toolkit (RTK) is an official toolset from the Redux team that makes working with Redux easier and less time-consuming.
+
+-> Less Boilerplate - In traditional Redux ,  you write a lot of repetitive code just to gt basic things done. RTK cuts down on all that extra code and gives you a cleaner, simpler way to manage state.
+
+-> Simpler Setup - It also automatically sets up your store, adds some middleware for things like asyncs actions , and even connects you to Redux DevTools for debugging without extra configuration.
+
+-> Built-in Asyncs Handling - If you're ever used Redux Thunk for async tasks like fetching data from an API , RTK has a built-in feature called createAsyncThunk that makes it even easier to handle async actions.
+
+why we need to use redux toolkit?
+✅ Less Boilerplate – No need to manually write action types, action creators, or immutable updates.
+✅ Easier State Updates – Uses Immer, allowing simpler mutations.
+✅ Built-in Middleware – No need to configure Redux Thunk separately.
+✅ Automatic DevTools Setup – No need to manually enable Redux DevTools.
+✅ Slices Make Code Cleaner – Actions and reducers are combined in a single file.
+     
+                -redux toolkit have store that we create using configureStore function and we have to import it 
+                -we have to import createslice , createslice ee ekk individal  action and reducer che pela redux ma reducer and                 action alag alag banavu padtu pan ama createslice karine enu name api devanu and pachi ena andar j reducer                 and creator action included hoy che .
+                    - Dispatch function apde action ne call karisu like addbutton maa dispatch kariine action call karavnu 
+                - useselector thi apde store ma bhaddhi vastu access kari sakiye
+
+
+--------------------------- Redux Toolkit Process ---------------------------
+
+🎯 Summary - Redux Toolkit Flow
+1️⃣ Install Redux Toolkit & React-Redux
+2️⃣ Create a Redux Slice (createSlice())
+3️⃣ Setup the Redux Store (configureStore())
+4️⃣ Provide Store to the App (Provider store={store})
+5️⃣ Use Redux in a Component (useSelector() & useDispatch())
+6️⃣ Render the Component in App.jsx
+7️⃣ Run the App & Test Redux Toolkit in Action! 🚀
+
+✅ Redux Toolkit makes state management easier, scalable, and efficient! 🔥
+-----------------------------------------------------------------------------
+
+
+
+====================REDUX TOOLKIT AYNCFUNCTION CALLED CREATASYNCTHUNK=====================
+
+  TO handle  async task we need creatasyncthunk to handle it and creeatasyncthunk gives extrareducers and builder function and builder function have methods addcase 
+
+
+🔹 Why Use extraReducers?
+✅ When you need to handle actions from another slice or async thunk.
+✅ Used for handling pending, fulfilled, and rejected states of an async action.
+✅ Unlike reducers, it does not auto-generate action creators.
+
+===================================================================================================
+
+
+

@@ -1,0 +1,108 @@
+/* *{
+  background-color: deepskyblue;
+} */
+
+
+
+.mainDiv{
+  background-color: cadetblue;
+  height: 50%;
+  
+  
+  
+}
+
+.listDiv{
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  gap: 20px;
+  
+
+}
+
+.listDiv li{
+list-style: none;
+padding-bottom: 10px;
+margin-bottom: 10px;
+
+}
+
+.listDiv li:hover{
+  background-color: chartreuse;
+  color: brown;
+}
+
+
+
+
+
+
+
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Styling the Products container */
+h1 {
+  text-align: center;
+  color: #333;
+  margin-top: 20px;
+}
+
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Ensure 3 cards per row */
+  gap: 20px; /* Space between the cards */
+  margin: 20px;
+  padding: 10px;
+}
+
+/* Styling the individual Card */
+.Card {
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.Card:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.Card img {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.Card h1 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.Card p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .products-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .products-container {
+    grid-template-columns: 1fr; /* 1 card per row on small screens */
+  }
+}
